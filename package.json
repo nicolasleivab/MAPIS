@@ -1,0 +1,38 @@
+{
+  "name": "mapis",
+  "version": "1.0.0",
+  "description": "MAPIS Architecture: A Modular and Isolated Frontend Development Approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasleivab/MAPIS.git"
+  },
+  "keywords": [
+    "Frontend",
+    "Architecure",
+    "MAPIS"
+  ],
+  "author": "Nicolás Leiva Büchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicolasleivab/MAPIS/issues"
+  },
+  "homepage": "https://github.com/nicolasleivab/MAPIS#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-router-dom": "^5.3.3",
+    "eslint": "^9.12.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0"
+  }
+}
