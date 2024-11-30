@@ -17,16 +17,8 @@ MAPIS organizes an application into five distinct layers, each with a dedicated 
 - Services: Responsible for handling asynchronous operations and external communications, Services manages API calls, authentication, and interactions with external services. It decouples service interactions from the rest of the system and ensures clean API logic, as well as service-specific configurations.
 
 -----
-### Benefits of MAPIS Architecture
+##Why go back to monolithic clients?
 
-- Adapted for Monorepos: MAPIS is optimized for front-end monorepos, making it easier to handle complex applications in a single repository. This is particularly beneficial for teams that don't need to manage complex microfrontends, as monorepos can consolidate development efforts while maintaining clear modularity.
+With the rise of smaller development teams, driven by the decreasing cost of coding through productivity tools and AI assistants, there is growing pressure to revert to monolithic client architectures. It is important to remember that microfrontends address organizational challenges rather than technical ones. They are designed to decouple deployment cycles from organizational structures and delivery pipelines, offering little advantage for solo or small teams, who are better off working with the same versions in a single repository.
 
-- Adaptability to Complexity: As front-end systems grow more complex, MAPIS provides a structured approach to handling intricate business logic, asynchronous operations, and UI rendering. It helps developers navigate this complexity with ease, even as applications grow larger.
-
-- Separation of Concerns: Each layer has a well-defined responsibility, allowing developers to work independently on different aspects of the application without disrupting other parts. This modular approach enhances maintainability, scalability, and testability.
-
-- Shift Toward Monolithic Clients: With the rise of smaller development teams, there is increasing pressure to return to monolithic client architectures. Managing microfrontends can be overkill for smaller teams that don’t need the overhead of complex setups. Tools that boost productivity and performance now allow teams to build efficient and scalable monolithic clients, which in turn shortens development cycles and reduces complexity.
-
-- Modular Scalability: MAPIS supports easy addition or modification of features with minimal impact on the rest of the application. Each layer’s isolation allows for clean, scalable codebases, which is especially important for smaller teams working with tight development schedules.
-
-By following the MAPIS architecture, teams can take advantage of the benefits of monorepos and monolithic client development while maintaining the flexibility, scalability, and maintainability required in modern front-end applications. It ensures that projects remain efficient and productive, even as they grow in size and complexity.
+For smaller teams, managing microfrontends often introduces unnecessary overhead and complexity. Modern tools that enhance productivity and performance now enable the creation of efficient, scalable monolithic clients, which simplify workflows, reduce complexity, and shorten development cycles.
