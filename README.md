@@ -17,7 +17,7 @@ MAPIS organizes an application into five distinct layers, each with a dedicated 
 - Services: Responsible for handling asynchronous operations and external communications, Services manages API calls, authentication, and interactions with external services. It decouples service interactions from the rest of the system and ensures clean API logic, as well as service-specific configurations.
 
 -----
-##Why go back to monolithic clients?
+## Why go back to monolithic clients?
 
 With the rise of smaller development teams, driven by the decreasing cost of coding through productivity tools and AI assistants, there is growing pressure to revert to monolithic client architectures. It is important to remember that microfrontends address organizational challenges rather than technical ones. They are designed to decouple deployment cycles from organizational structures and delivery pipelines, offering little advantage for solo or small teams, who are better off working with the same versions in a single repository.
 
