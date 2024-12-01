@@ -13,7 +13,6 @@ export function createIntl(locale = LOCALES[0]) {
     formatNumber: function (num, options) {
       return formatNumberMethod(num, locale, {
         type: options?.type ?? DEFAULT_NUMBER_OPTIONS.type,
-        convertFrom: options?.convertFrom,
         precision: options?.precision ?? DEFAULT_NUMBER_OPTIONS.precision,
         compactDisplay:
           options?.compactDisplay ?? DEFAULT_NUMBER_OPTIONS.compactDisplay,

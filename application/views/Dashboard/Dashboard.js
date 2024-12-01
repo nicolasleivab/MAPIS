@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Box, Flex } from '@mantine/core';
 import { CustomTable } from '../../../presentation/components';
 import * as styles from './Dashboard.module.css';
 import {
@@ -36,11 +35,9 @@ export default function Operations() {
 
   return (
     <div className={styles.Dashboard}>
-      <Flex>
-        <Box w={'50%'}>
-          <CustomTable columns={columns} data={formattedData} />
-        </Box>
-      </Flex>
+      <div className={styles.tableContainer}>
+        <CustomTable columns={columns} data={formattedData} />
+      </div>
     </div>
   );
 }

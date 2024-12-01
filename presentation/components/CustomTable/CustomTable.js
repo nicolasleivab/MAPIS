@@ -1,27 +1,47 @@
+// CustomTable.jsx
+
 import React, { useState } from 'react';
-import { Table, Checkbox } from '@mantine/core';
+import * as styles from './CustomTable.module.css';
 
 export default function CustomTable({ columns, data }) {
   const [selectedRows, setSelectedRows] = useState([]);
 
+  const handleSelectAll = (event) => {
+    if (event.target.checked) {
+      setSelectedRows(data.map((_, index) => index));
+    } else {
+      setSelectedRows([]);
+    }
+  };
+
+  const handleRowSelect = (event, rowIndex) => {
+    if (event.target.checked) {
+      setSelectedRows([...selectedRows, rowIndex]);
+    } else {
+      setSelectedRows(selectedRows.filter((index) => index !== rowIndex));
+    }
+  };
+
+  const isRowSelected = (rowIndex) => selectedRows.includes(rowIndex);
+
+  const areAllRowsSelected =
+    selectedRows.length === data.length && data.length > 0;
+  const isIndeterminate =
+    selectedRows.length > 0 && selectedRows.length < data.length;
+
   return (
-    <Table striped highlightOnHover>
+    <table className={styles.CustomTable}>
       <thead>
         <tr>
           <th>
-            <Checkbox
+            <input
+              type="checkbox"
               aria-label="Select all rows"
-              checked={selectedRows.length === data.length && data.length > 0}
-              indeterminate={
-                selectedRows.length > 0 && selectedRows.length < data.length
-              }
-              onChange={(event) =>
-                setSelectedRows(
-                  event.currentTarget.checked
-                    ? data.map((_, index) => index)
-                    : []
-                )
-              }
+              checked={areAllRowsSelected}
+              ref={(input) => {
+                if (input) input.indeterminate = isIndeterminate;
+              }}
+              onChange={handleSelectAll}
             />
           </th>
           {columns.map((column, index) => (
@@ -33,23 +53,14 @@ export default function CustomTable({ columns, data }) {
         {data.map((row, rowIndex) => (
           <tr
             key={rowIndex}
-            style={{
-              backgroundColor: selectedRows.includes(rowIndex)
-                ? 'var(--mantine-color-blue-light)'
-                : undefined,
-            }}
+            className={isRowSelected(rowIndex) ? styles.selectedRow : ''}
           >
             <td>
-              <Checkbox
+              <input
+                type="checkbox"
                 aria-label={`Select row ${rowIndex}`}
-                checked={selectedRows.includes(rowIndex)}
-                onChange={(event) =>
-                  setSelectedRows(
-                    event.currentTarget.checked
-                      ? [...selectedRows, rowIndex]
-                      : selectedRows.filter((index) => index !== rowIndex)
-                  )
-                }
+                checked={isRowSelected(rowIndex)}
+                onChange={(event) => handleRowSelect(event, rowIndex)}
               />
             </td>
             {columns.map((column, colIndex) => (
@@ -58,6 +69,6 @@ export default function CustomTable({ columns, data }) {
           </tr>
         ))}
       </tbody>
-    </Table>
+    </table>
   );
 }

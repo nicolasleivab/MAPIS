@@ -34,11 +34,6 @@ export const SIGN_DISPLAY = ['auto', 'always', 'never', 'exceptZero'];
 
 export const COMPACT_NUMBER_DISPLAY = [true, false];
 
-const GET_UNIT_LABEL_OPTIONS = {
-  currencyCode: null, // You can replace null with a default currency code, e.g., 'USD'
-  value: null, // Replace with a default value if needed
-};
-
 export const DATA_FORMAT = [
   'decimal',
   'number',
