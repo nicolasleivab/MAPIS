@@ -28,7 +28,7 @@ export const INPUT_DATE_TYPES = ['Date', 'number', 'string'];
 
 export const CURRENCY_CODES = ['CLP', 'USD', 'EUR']; // ... and many more
 
-export const LOCALES = ['es-CL', 'en-US']; // ... and many more
+export const LOCALES = ['en-US', 'es-CL']; // ... and many more
 
 export const SIGN_DISPLAY = ['auto', 'always', 'never', 'exceptZero'];
 
