@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicolasleivab/fast-fe-arch.git"
+    "url": "git+https://github.com/nicolasleivab/MAPIS.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nicolasleivab/fast-fe-arch/issues"
+    "url": "https://github.com/nicolasleivab/MAPIS/issues"
   },
-  "homepage": "https://github.com/nicolasleivab/fast-fe-arch#readme",
+  "homepage": "https://github.com/nicolasleivab/MAPIS#readme",
   "dependencies": {
     "@mantine/core": "^7.14.3",
     "@mantine/hooks": "^7.14.3",
